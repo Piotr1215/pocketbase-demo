@@ -1,5 +1,5 @@
 FROM alpine:latest
-LABEL "maintainer"="Piotr Zaniewszki <piotrzan@gmail.com>"
+LABEL "maintainer"="Piotr Zaniewski <piotrzan@gmail.com>"
 
 ARG POCKETBASE_VERSION=0.7.2
 
@@ -17,4 +17,4 @@ RUN rm /app/pocketbase/pocketbase.zip
 
 EXPOSE 8090
 
-CMD [ "/app/pocketbase/pocketbase", "serve", "--http", "0.0.0.0:8090" ]
+ENTRYPOINT ["/app/pocketbase/pocketbase", "serve", "--http", "0.0.0.0:8090"]
